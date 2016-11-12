@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  font-size:12px;
+  font-family: "Calibri", Verdana, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url("../images/pattern.png");
+}

@@ -1,0 +1,260 @@
+/*---------------------page principale--------------------------------*/
+
+header, .description, .nav-principal, footer{     /*marges de la page*/
+  margin-right:20px;
+  margin-left:20px;
+  margin-top:20px;
+}
+
+
+
+
+h1 {                            /* titre de la page*/
+  color: #E6793E;
+  text-align: center;
+  font-size: 48px;
+  margin-top:20px;
+}
+
+hr {                            /* ligne sous le titre*/
+  opacity: 0.25;
+  background-image: linear-gradient(-90deg, rgba(0,0,0,0.00) 0%, #000000 50%, rgba(0,0,0,0.00) 100%);
+  border: 1px solid #979797;
+  margin-bottom:50px;
+}
+
+.page {                       /* flex de la page - titre/nav/contenu */
+  position:relative;
+  min-height: 100%;
+  background: white;
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.page q {                 /*texte sous la ligne */
+  display: block;
+  text-align: center;
+  font-size:24px;
+}
+
+.nav-principal {            /* menu de navigation*/
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+  
+  .nav-principal a {            /* liens vers les albums */
+   border: 1px solid #E1DEDE;
+   border-radius: 5px;
+   width: 220px;
+   height: 160px;
+   text-decoration: none;
+   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.10);
+   margin:0 auto;
+  }
+
+  .nav-principal a:hover {              /*liens vers les albums - survol */
+    transform:translate(10px,-10px);
+    text-shadow: 0 0 10px #E6793E;
+  }
+
+  .nav-principal a img {        /*liens vers les albums - Images*/
+   height: 110px;
+   width: 218px;
+   border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+  }
+
+  .nav-principal a p {      /*liens vers les albums - format du texte sous les images */
+   margin: 0;
+   padding-left: 10px;
+  }
+
+  .titre-album {        /*liens vers les albums - texte sous les images (titre) */
+  font-size: 16px;
+  color: black;
+  }
+
+  .annee {              /*liens vers les albums - texte sous les images (année) */
+  font-size: 12px;
+  color: #929292;
+  }
+
+main aside {          /*contenu - bloc de texte sur la droite*/
+  display: float;
+  float: right;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 33px;
+  width:300px;
+  padding-right:20px;
+}
+
+.performer {            /*contenu - bloc de texte sur la droite (noms en gras)*/
+  font-weight:bold;
+}
+
+.description {      /*contenu - bloc de texte sur la gauche*/
+  width:620px;
+  line-height: 20px;
+  font-size:18px;
+}
+
+footer {                /*pied de page */
+  margin-top: auto;
+  background: black;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  font-size:14px;  
+  padding-left: 20px;
+}
+
+
+
+/*page principale - format mobile*/
+
+@media (max-width:800px) {
+
+  .nav-principal {
+    flex-direction:column;
+    height:700px;
+ 
+      margin-right:auto;
+      margin-left:auto;
+  }
+
+
+
+  aside {
+    display:none;
+    margin:0;
+  }
+
+  .page {
+      width:300px;
+  }
+
+  .description {
+      width:260px;
+  }
+
+}
+
+
+/*----------------------- page album 2----------------------------------*/
+
+.page2 {              /* flex de la page */
+  min-height: 100%;
+  background: white;
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.banniere {       /* bannière en haut de la page */
+  width:980px;
+  height:300px;
+  overflow:hidden;
+  background-image: url("../images/Cards/reckoning.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 65%;
+}
+
+.titre {          /* texte en haut de la page (dans la bannière) */
+  font-size: 60px;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 10px rgba(0,0,0,0.50);
+  text-align: center;
+}
+
+.content {              /* flex du contenu*/
+  display:flex;
+}
+
+  .liste-titre {               /*fond des titres à gauche */
+    background: #F2F2F2;
+  }
+
+  .liste-titre ol {           /* style liste ordonnée des titres de chansons*/
+    font-family: "Consolas";
+    font-size: 12px;
+    color: #4D4D4D;
+    line-height: 18px;
+    width:200px;
+
+  }
+
+  .liste-titre p {      /*format du mot "tracklist" */
+    font-size: 24px;
+    text-align:center;
+  }
+
+  .description-album {      /*format du contenu de droite*/
+    font-size: 18px;
+    line-height: 24px;
+    padding-right:20px;
+    padding-left:20px;
+
+  }
+
+  iframe {                /* fenetre de la video */
+    display:block;
+    text-align: center;
+    margin: 50px auto; 
+    width:360px;
+  }
+
+  .description-album a {   /* format du lien de retour page principale */
+    font-size: 18px;
+    color: #DE4900;
+  }
+
+  /*format mobile*/
+
+@media (max-width:800px) {
+
+  .page2 {
+    width:400px;
+  }
+
+  .content {
+    flex-direction:column;
+
+   }
+
+  .liste-titre {
+    order:2;
+  }
+
+  .banniere {
+  width:400px;
+  height:400px;
+  }
+
+  .titre {
+    visibility: hidden;
+  }
+
+}
+
+@media (max-width:400px) {
+
+  .page2 {
+    width:300px;
+  }
+
+  .banniere {
+  width:300px;
+  height:300px;
+  }
+
+  iframe {
+    width:260px;
+  }
+}
